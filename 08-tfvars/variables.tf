@@ -1,0 +1,3 @@
+variable "varfile" {
+  type = string
+}
