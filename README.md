@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# terraform
-=======
-# terraform
-Created using Terraform for practice.
->>>>>>> 45d0b884ea1cedd39ca4c5332b223eb77f13bc96
+# Terraform 
+
+This repository contains a Terraform script collection designed to provision and manage cloud infrastructures across multiple platforms, including AWS, OCI, and more. These scripts are intended for hands-on practice and learning, allowing users to experiment with various cloud resources and configurations
