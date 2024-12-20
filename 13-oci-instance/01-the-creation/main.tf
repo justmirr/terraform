@@ -19,16 +19,6 @@ resource "oci_core_vcn" "thevcn" {
   cidr_blocks = ["10.0.0.0/24"]
 }
 
-# module "vcn" {
-#   source = "oracle-terraform-modules/vcn/oci"
-#   version = "3.1.0"
-
-#   compartment_id = "${oci_identity_compartment.thecompartment.compartment_id}"
-
-#   vcn_name = "happy-vcn"
-#   vcn_dns_label = "happyvcn"
-# }
-
 resource "oci_core_subnet" "thepublicsubnet" {
   compartment_id = "${oci_identity_compartment.thecompartment.compartment_id}"
   vcn_id = oci_core_vcn.thevcn.id
