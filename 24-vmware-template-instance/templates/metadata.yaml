@@ -1,0 +1,15 @@
+#cloud-config
+local-hostname: ${name}
+instance-id: ubuntu-${name}
+network:
+  version: 2
+  ethernets:
+    ens160:
+      dhcp4: false
+      addresses:
+        - 192.168.3.43/24
+      nameservers:
+        addresses: [${dns_server_1}, ${dns_server_2}]
+      routes:
+        - to: default
+          via: ${ipv4_gateway}

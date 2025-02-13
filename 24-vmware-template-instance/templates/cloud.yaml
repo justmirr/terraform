@@ -1,0 +1,16 @@
+#cloud-config
+local-hostname: ${name}
+instance-id: rhel-${name}
+network:
+  version: 2
+  renderer: NetworkManager
+  ethernets:
+    ens160:
+      dhcp4: false
+      addresses:
+        - 192.168.3.43/24
+      nameservers:
+        addresses:
+          - ${dns_server_1}
+          - ${dns_server_2}
+      gateway4: ${ipv4_gateway}

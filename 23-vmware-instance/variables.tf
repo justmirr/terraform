@@ -6,6 +6,6 @@ variable "password" {
   type = string
 }
 
-variable "server" {
+variable "bvsphere_server" {
   type = string
 }

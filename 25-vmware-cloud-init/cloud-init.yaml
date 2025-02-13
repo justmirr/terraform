@@ -1,0 +1,16 @@
+#cloud-config
+hostname: terraform-001
+manage_etc_hosts: true
+
+users:
+  - name: test-001
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCFR6e1q1yRdjbkO2jcktuLCdLUodOKPUkB41yVAU/GbKqm9uP3hyPpCmdMliPMuvVSO67NClg3Q0wcBlrx4ljR8M/VZ4cYwxhD1J336R0UdXFNIo+LkW32LM9JBD42thZjbCemn7UDMlNWJ4GO3rRTYLBf2zPndpEYFOjlUGap9bB04BJu9gN17Bji6Ki/1Ig/p3LXdly4iy0gLmhXrBlHTS5fDAifwDZnLx4NPDjKCefpxpS4ojAR01YpgcNmbaIQifL/YyKrdvkwv1s4zMJJ/jU5q4mZI93wJMen9pfPMGCl7JrFBAxYTPu0p4fA8VDsQ/v0p/3qX2baT7LZKkjx ssh-key-2024-11-12
+
+write_files:
+  - path: /etc/motd
+    content: |
+      Cloud Init VM created.
+
+runcmd:
+  - [ sh, -c, 'echo "Provisioning with cloud-init complete" >> /var/log/cloud-init.log' ]

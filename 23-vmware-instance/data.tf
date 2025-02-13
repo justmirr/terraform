@@ -7,8 +7,8 @@ data "vsphere_datastore" "thedatastore" {
   datacenter_id = data.vsphere_datacenter.datacenter.id
 }
 
-data "vsphere_resource_pool" "theresourcepool" {
-  name = "rsp"
+data "vsphere_compute_cluster" "thecluster" {
+  name = "Cluster"
   datacenter_id = data.vsphere_datacenter.datacenter.id
 }
 
